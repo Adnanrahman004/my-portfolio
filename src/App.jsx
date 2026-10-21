@@ -828,7 +828,11 @@ export default function App() {
             </section>
 
             {/* STATS */}
-            <section className="stats reveal" aria-label="Statistics">
+            <section
+  className="stats reveal"
+  aria-label="Statistics"
+  style={{ transform: "translateY(20px)" }}
+>
               {stats.map(({ value, label, Icon }) => (
                 <div className="stat" key={label}>
                   <Icon className="stat-icon" size={24} />
