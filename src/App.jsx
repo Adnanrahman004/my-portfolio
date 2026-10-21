@@ -772,8 +772,8 @@ export default function App() {
 
                 <p>
                   I&apos;m {PROFILE.name}, a full stack developer and B.Tech
-                  Computer Science student. I make clean, fast and responsive
-                  websites with React, Node.js and MongoDB.
+                  Computer Science student I make clean fast and responsive
+                  websites with React Node.js and MongoDB
                 </p>
 
                 <div className="hero-actions">
