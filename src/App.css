@@ -1132,7 +1132,7 @@ body {
   z-index: 4;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: -36px 24px 60px;
+  margin: 24px 24px 60px;
   padding: 24px 12px;
   border: 1px solid var(--line);
   border-radius: 18px;
