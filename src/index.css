@@ -1,0 +1,15 @@
+/* Intentionally minimal.
+   The default Vite template styles (body { display:flex; place-items:center },
+   #root { max-width:1280px; padding:2rem; text-align:center }) are removed
+   because they break the full-width sidebar layout. All design rules live in App.css. */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#root {
+  max-width: none;
+  text-align: left;
+}
