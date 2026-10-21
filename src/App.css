@@ -2156,7 +2156,7 @@ a.contact-row:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 18px 12px 72px;
+    padding: 12px 18px 12px 70px;
     border-bottom: 1px solid var(--line);
     background: var(--cream);
     backdrop-filter: blur(8px);
