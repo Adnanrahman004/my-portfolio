@@ -390,7 +390,6 @@ body {
   display: none;
 }
 
-/* ---------- BRAND (AR logo) → menu button ke bilkul paas ---------- */
 .brand {
   display: flex;
   flex-direction: column;
@@ -400,23 +399,6 @@ body {
   padding: 0 8px;
   animation: slideIn 0.6s var(--ease) backwards;
 }
-
-/* Collapsed rail: brand ko menu-fab ke right edge ke paas align karo */
-@media (min-width: 761px) {
-  .sidebar:not(.open) .brand {
-    padding: 0;
-  }
-}
-
-/* Jab sidebar khula ho, brand ko FAB ke bagal me (vertical align) le aao */
-@media (min-width: 761px) {
-  .sidebar.open .brand {
-    padding: 0;
-    margin-top: -34px; /* FAB ke level par upar shift */
-    align-items: flex-start;
-  }
-}
-
 .brand-mark {
   margin-bottom: 8px;
   color: var(--green);
