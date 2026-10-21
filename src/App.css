@@ -2390,3 +2390,9 @@ a.contact-row:hover {
     scroll-behavior: auto !important;
   }
 }
+@media (max-width: 600px) {
+  .stats {
+    margin-top: 24px !important;
+    transform: none !important;
+  }
+}
