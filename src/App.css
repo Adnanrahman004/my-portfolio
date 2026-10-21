@@ -125,160 +125,157 @@ body {
    PREMIUM MENU BUTTON — SMALLER · WARM TRANSPARENT
    (This is the ONLY section that changed vs original)
    ===================================================== */
+/* ---------- PREMIUM COMPACT MENU BUTTON ---------- */
 .menu-fab {
   position: fixed;
   z-index: 70;
   top: 18px;
   left: 16px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  height: 44px;
-  padding: 0 16px 0 14px;
+
+  width: 46px;
+  height: 46px;
+  padding: 0;
   overflow: hidden;
-  border: 1px solid rgba(231, 199, 126, 0.45);
-  border-radius: 13px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 196, 130, 0.18) 0%,
-    rgba(255, 170, 110, 0.1) 45%,
-    rgba(255, 220, 170, 0.16) 100%
-  );
-  color: #6b4a1e;
-  font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
+
+  border: 1px solid rgba(196, 154, 82, 0.55);
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fffaf0, #f3e5c9);
+  color: #173b2e;
+
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
+
   box-shadow:
-    0 6px 18px rgba(196, 154, 82, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35),
-    inset 0 -1px 0 rgba(196, 154, 82, 0.12);
+    0 5px 16px rgba(100, 75, 30, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
   transition:
     transform 0.3s var(--ease),
-    box-shadow 0.3s,
-    border-color 0.3s,
-    background 0.35s,
-    color 0.3s,
-    left 0.45s var(--ease),
-    padding 0.35s var(--ease),
-    width 0.35s var(--ease);
-  -webkit-tap-highlight-color: transparent;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    left 0.45s var(--ease);
 }
+
 .menu-fab::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     115deg,
-    transparent 30%,
-    rgba(255, 235, 200, 0.55) 50%,
-    transparent 70%
+    transparent 25%,
+    rgba(255, 255, 255, 0.65) 50%,
+    transparent 75%
   );
   transform: translateX(-120%);
-  transition: transform 0.8s var(--ease);
+  transition: transform 0.7s var(--ease);
   pointer-events: none;
 }
+
 .menu-fab:hover::before {
   transform: translateX(120%);
 }
+
 .menu-fab:hover {
   transform: translateY(-2px);
-  border-color: var(--gold);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 196, 130, 0.3) 0%,
-    rgba(255, 170, 110, 0.18) 45%,
-    rgba(255, 220, 170, 0.28) 100%
-  );
-  color: #5a3d17;
+  border-color: #c49a52;
+  background: linear-gradient(145deg, #fffdf7, #eddbb6);
   box-shadow:
-    0 10px 24px rgba(196, 154, 82, 0.35),
-    0 0 0 4px rgba(196, 154, 82, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    inset 0 -1px 0 rgba(196, 154, 82, 0.18);
+    0 8px 20px rgba(100, 75, 30, 0.18),
+    0 0 0 3px rgba(196, 154, 82, 0.1);
 }
+
 .menu-fab:active {
-  transform: scale(0.96);
+  transform: scale(0.95);
 }
 
+.menu-fab:focus-visible {
+  outline: 3px solid rgba(196, 154, 82, 0.55);
+  outline-offset: 3px;
+}
+
+/* Hide the MENU text when the button is closed */
 .menu-fab-label {
-  position: relative;
-  z-index: 1;
-  line-height: 1;
-  transition:
-    opacity 0.3s var(--ease),
-    transform 0.35s var(--ease);
-}
-.menu-fab.is-open .menu-fab-label {
-  opacity: 0;
-  transform: translateX(-6px);
-  width: 0;
-  overflow: hidden;
+  display: none;
 }
 
+/* Three elegant menu lines */
 .menu-fab-lines {
   position: relative;
   z-index: 1;
   display: block;
   width: 20px;
-  height: 15px;
+  height: 16px;
   flex: 0 0 auto;
 }
+
 .menu-fab-lines i {
   position: absolute;
   left: 0;
   height: 2px;
-  border-radius: 2px;
+  border-radius: 3px;
   background: currentColor;
   transition:
     top 0.35s var(--ease),
     width 0.35s var(--ease),
-    transform 0.45s var(--ease),
-    opacity 0.25s;
+    transform 0.4s var(--ease),
+    opacity 0.25s ease;
 }
+
 .menu-fab-lines i:nth-child(1) {
   top: 0;
   width: 20px;
 }
+
 .menu-fab-lines i:nth-child(2) {
-  top: 6.5px;
-  width: 14px;
+  top: 7px;
+  width: 13px;
 }
+
 .menu-fab-lines i:nth-child(3) {
-  top: 13px;
+  top: 14px;
   width: 20px;
 }
+
 .menu-fab:hover .menu-fab-lines i:nth-child(2) {
   width: 20px;
 }
 
+/* Open state: compact gold button with an X */
 .menu-fab.is-open {
-  background: linear-gradient(145deg, #dcb468, #c49a52);
-  border-color: #e7c77e;
+  background: linear-gradient(145deg, #e4c27e, #c49a52);
+  border-color: #d9b66d;
   color: #173b2e;
   left: calc(var(--side-w) + 16px);
   width: 44px;
+  height: 44px;
   padding: 0;
-  gap: 0;
   box-shadow:
-    0 10px 22px rgba(196, 154, 82, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    0 8px 20px rgba(196, 154, 82, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
+
 .menu-fab.is-open .menu-fab-lines i:nth-child(1) {
-  top: 6.5px;
+  top: 7px;
   width: 20px;
   transform: rotate(45deg);
 }
+
 .menu-fab.is-open .menu-fab-lines i:nth-child(2) {
   width: 0;
   opacity: 0;
 }
+
 .menu-fab.is-open .menu-fab-lines i:nth-child(3) {
-  top: 6.5px;
+  top: 7px;
   width: 20px;
   transform: rotate(-45deg);
 }
@@ -292,13 +289,14 @@ body {
   pointer-events: none;
   animation: fabPulse 3.2s ease-in-out infinite;
 }
+
 @keyframes fabPulse {
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(196, 154, 82, 0);
   }
   50% {
-    box-shadow: 0 0 0 6px rgba(196, 154, 82, 0.12);
+    box-shadow: 0 0 0 5px rgba(196, 154, 82, 0.1);
   }
 }
 
