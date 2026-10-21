@@ -308,7 +308,7 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  padding: 90px 12px 20px;
+  padding: 22px 12px 20px;
   background: var(--side);
   border-right: 1px solid var(--line);
   transition:
@@ -392,15 +392,16 @@ body {
 
 .brand {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
   margin-bottom: 18px;
   padding: 0 8px;
   animation: slideIn 0.6s var(--ease) backwards;
 }
 .brand-mark {
-  margin-bottom: 8px;
+  margin-bottom: 0;
   color: var(--green);
   font: italic 700 28px/1 var(--serif);
   transition: transform 0.4s var(--ease);
